@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* SLIDES */
+.item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: var(--background);
+  transition: background-color 0.5s ease;
+}
+
+.item.active {
+  display: block;
+}
+
+/* TÍTULOS */
+.nome {
+  font-size: 10rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* IMAGENS */
+.item .refri {
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.item .fruta {
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* BOTÕES */
+.flecha {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  z-index: 99999;
+}
+
+.flecha button {
+  background: white;
+  color: black;
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.flecha button:hover {
+  background: #ddd;
+  transform: scale(1.1);
+}
